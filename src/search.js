@@ -14,6 +14,7 @@ class Search extends Component{
 
   searchBooks(query) {
     this.setState({query: query})
+    if (query !== '' && query !== undefined){
     search(query, 20).then(books => {
       if (!books || books.error){
         //console.log(books)
@@ -40,6 +41,7 @@ class Search extends Component{
       }
     });
   }
+}
 
   render(){
     let { availableBooks, query, error } = this.state
