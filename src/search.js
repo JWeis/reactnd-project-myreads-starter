@@ -13,7 +13,7 @@ class Search extends Component{
   }
 
   searchBooks(query) {
-    this.setState({query: query.trim()})
+    this.setState({query: query})
     search(query, 20).then(books => {
       if (!books || books.error){
         //console.log(books)
