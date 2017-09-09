@@ -5,7 +5,7 @@ class Book extends Component {
   state = {
     shelf: `${this.props.book.shelf}`
   }
-
+  
   handleChange = (e) => {
     const values = e.target.value
     this.setState({shelf: values})
