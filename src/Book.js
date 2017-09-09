@@ -40,7 +40,11 @@ class Book extends Component {
             </div>
           </div>
           <div className="book-title">{book.title}</div>
-          <div className="book-authors">{book.authors}</div>
+          {book.authors ? 
+          <div className="book-authors">{book.authors.length > 1 ? book.authors.join(', '): book.authors}</div>
+          :
+          <div className="book-authors">No Author Found</div>
+          }
         </div>
       </li>
     )
